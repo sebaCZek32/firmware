@@ -152,7 +152,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Bruce-${{ env.SELECTED_ENV }}
-          path: Bruce-*.*
+          path: .pio/build/ES3C28P/firmware.bin
           retention-days: 1
           if-no-files-found: error
 
