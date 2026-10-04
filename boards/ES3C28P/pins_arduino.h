@@ -142,14 +142,13 @@ static const uint8_t MISO = SPI_MISO_PIN;
 #define LED_ON HIGH
 #define LED_OFF LOW
 
-#define IR_TX_PINS '{{"GPIO1", 1}, {"GPIO2", 2}, {"GPIO4", 4}, {"GPIO8", 8}}'
-#define IR_RX_PINS '{{"GPIO1", 1}, {"GPIO2", 2}, {"GPIO4", 4}, {"GPIO8", 8}}'
+#define IR_RX_PINS {{"GPIO1", 1}, {"GPIO2", 2}, {"GPIO4", 4}, {"GPIO8", 8}}
 
 // =============================================
 // RF (opcjonalnie, zewnetrzne)
 // =============================================
-#define RF_TX_PINS '{{"GPIO1", 1}, {"GPIO2", 2}, {"GPIO4", 4}, {"GPIO8", 8}}'
-#define RF_RX_PINS '{{"GPIO1", 1}, {"GPIO2", 2}, {"GPIO4", 4}, {"GPIO8", 8}}'
+#define RF_TX_PINS {{"GPIO1", 1}, {"GPIO2", 2}, {"GPIO4", 4}, {"GPIO8", 8}}
+#define RF_RX_PINS {{"GPIO1", 1}, {"GPIO2", 2}, {"GPIO4", 4}, {"GPIO8", 8}}
 
 // =============================================
 // Serial (GPS)
