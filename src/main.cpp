@@ -79,7 +79,9 @@ static void taskEncoderPoll(void *parameter) {
     }
 }
 #endif
-
+void InputHandler() {
+    // Pusta funkcja, żeby kompilator przestał zgłaszać błąd
+}
 TaskHandle_t xHandle;
 void __attribute__((weak)) taskInputHandler(void *parameter) {
     auto timer = millis();
