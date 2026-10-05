@@ -148,13 +148,25 @@ jobs:
             echo "Build log not found; nothing to show."
           fi
 
-      - name: Upload Artifacts
+      - name: Upload merged image (Bruce-*.bin)
         uses: actions/upload-artifact@v4
         with:
           name: Bruce-${{ env.SELECTED_ENV }}
-          path: .pio/build/ES3C28P/firmware.bin
-          retention-days: 1
+          path: Bruce-*.bin
+          retention-days: 5
           if-no-files-found: error
+
+      - name: Upload raw build files (debug)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Bruce-${{ env.SELECTED_ENV }}-raw
+          path: |
+            .pio/build/${{ env.SELECTED_ENV }}/bootloader.bin
+            .pio/build/${{ env.SELECTED_ENV }}/partitions.bin
+            .pio/build/${{ env.SELECTED_ENV }}/firmware.bin
+          retention-days: 5
+          if-no-files-found: warn
 
       - name: Display Build Info
         run: |
