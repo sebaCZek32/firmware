@@ -128,11 +128,12 @@ static const uint8_t MISO = SPI_MISO_PIN;
 // =============================================
 // Przycisk BOOT
 // =============================================
-#define HAS_BTN 1
-#define BTN_ALIAS "\"Boot\""
-#define BTN_PIN 0
-#define BTN_ACT LOW
-#define SEL_BTN 0
+// Wylaczone: kolizja InputHandler() z main.cpp (obsluga wejscia robi dotyk w interface.cpp)
+// #define HAS_BTN 1
+// #define BTN_ALIAS "\"Boot\""
+// #define BTN_PIN 0
+// #define BTN_ACT LOW
+// #define SEL_BTN 0
 
 // =============================================
 // Podczerwien (opcjonalnie, zewnetrzne)
