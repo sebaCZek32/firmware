@@ -62,7 +62,7 @@ static const uint8_t SCK = 18;
 #define MINBRIGHT (uint8_t)1
 
 #define USER_SETUP_LOADED 1
-#define ST7789_DRIVER 1
+#define ILI9341_DRIVER 1
 #define TFT_RGB_ORDER 0
 #define TFT_WIDTH 170
 #define TFT_HEIGHT 320
