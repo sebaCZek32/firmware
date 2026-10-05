@@ -79,9 +79,6 @@ static void taskEncoderPoll(void *parameter) {
     }
 }
 #endif
-void InputHandler() {
-    // Pusta funkcja, żeby kompilator przestał zgłaszać błąd
-}
 TaskHandle_t xHandle;
 void __attribute__((weak)) taskInputHandler(void *parameter) {
     auto timer = millis();
@@ -105,9 +102,7 @@ void __attribute__((weak)) taskInputHandler(void *parameter) {
             touchPoint.pressed = false;
             touchPoint.Clear();
             checkAndRecoverSysI2CBus();
-#ifndef USE_TFT_eSPI_TOUCH
             InputHandler();
-#endif
             timer = millis();
         }
         vTaskDelay(pdMS_TO_TICKS(10));
